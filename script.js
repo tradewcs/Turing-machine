@@ -20,6 +20,7 @@ let HeadCurrentPosition = 0;
 let statesCount = 2;
 let currentState = 1;
 
+//tst comment
 
 // addStateButton.addEventListener('click', function() {
 	// 	ExternalAlphabet.innerHTML += 4;
