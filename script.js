@@ -11,8 +11,6 @@ let stripSymbolSelect = document.getElementById('stripSymbolSelect');
 let statesManager = document.querySelector('.statesManager');
 let doCommand = document.getElementById('doCommand');
 
-
-
 const cells_count = 57;
 let Alpabeth = ['0', '1'];
 let nullSymbol = '0';
@@ -20,25 +18,11 @@ let HeadCurrentPosition = 0;
 let statesCount = 2;
 let currentState = 1;
 
-//tst comment
-
-// addStateButton.addEventListener('click', function() {
-// 	ExternalAlphabet.innerHTML += 4;
-
-// 	// MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'machine-strip']);
-
-// 	console.log('123');
-// });
-
 
 window.onload = () => {
   fillStrip(cells_count);
-
   setHead(5);
-
-
   // MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'machine-strip']);
-
 }
 
 
@@ -284,11 +268,8 @@ function reloadStateChoice(event) {
       commandCell.classList.remove('yellow')
 
       while (true) {
-
         await (async() => { setTimeout(() => 1, Number(document.getElementById('selectSpeed').value) * 1000); })
         doOneCommand()
-
-        // if ()
       }
     }
 
@@ -324,6 +305,4 @@ function doOneCommand() {
   return command[2];
 }
 
-function is_machineWork() {
-
-}
+function is_machineWork() {}
