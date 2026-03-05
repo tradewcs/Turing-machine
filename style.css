@@ -1,249 +1,301 @@
-*{padding: 0; margin: 0; border: 0;}
-*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-nav,footer,header,aside{display: block;}
-html,body{height: 100%;width: 100%;font-size: 100%;line-height: 1;font-size: 14px;-ms-text-size-adjust: 100%;}
-input,button,textarea{font-family: inherit;}
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner{padding: 0;border: 0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-img{vertical-align: top;}
-h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: inherit;}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
 
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
+:focus,
+:active {
+  outline: none;
+}
 
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
 body {
-	margin: 0;
-	font-family: 'Fira code';
-	font-size: 30px;
-	
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
 }
 
-
-ul li {
-	text-align: left;
+input,
+button,
+textarea {
+  font-family: inherit;
 }
 
-span {
-	color: red;
-}
-
-
-h5 {
-	margin: 30px;
-}
-
-input {
-	margin: 5px;
-	width: 18px;
-	height: 18px;
-}
-
-select {
-	width: 60px;
-	height: 30px;
-	font-size: 20px;
-	background-color: rgb(193, 212, 221);
-	border-radius: 5px;
+input::-ms-clear {
+  display: none;
 }
 
 button {
-	display: block;
-	width: 100%;
-	padding: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	font-size: 20px;
-	border: 1px solid black;
-	border-radius: 5px;
-	background-color: rgb(199, 199, 199);
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Fira code';
+  font-size: 30px;
+}
+
+ul li {
+  text-align: left;
+}
+
+span {
+  color: red;
+}
+
+h5 {
+  margin: 30px;
+}
+
+input {
+  margin: 5px;
+  width: 18px;
+  height: 18px;
+}
+
+select {
+  width: 60px;
+  height: 30px;
+  font-size: 20px;
+  background-color: rgb(193, 212, 221);
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgb(199, 199, 199);
 }
 
 button:hover {
-	background-color: rgb(182, 182, 182);
+  background-color: rgb(182, 182, 182);
 }
 
 button:active {
-	background-color: rgb(153, 152, 152);
+  background-color: rgb(153, 152, 152);
 }
 
-
 .invisible {
-	display: none;
+  display: none;
 }
 
 .inactive {
-	background-color: rgb(219, 219, 219);
-	color: rgb(202, 202, 202);
+  background-color: rgb(219, 219, 219);
+  color: rgb(202, 202, 202);
 }
 
 .inactive:hover {
-	background-color: rgb(219, 219, 219);
-	cursor: not-allowed;
+  background-color: rgb(219, 219, 219);
+  cursor: not-allowed;
 }
 
 .inactive:active {
-	background-color: rgb(219, 219, 219);
+  background-color: rgb(219, 219, 219);
 }
 
 .yellow {
-	background-color: #ffff00;
+  background-color: #ffff00;
 }
 
 .green {
-	background-color: #2fe32a;
+  background-color: #2fe32a;
 }
 
-table td, th {
-	border: 0.5px solid black;
+table td,
+th {
+  border: 0.5px solid black;
 }
 
 .wrapper {
-	margin: 40px;
+  margin: 40px;
 }
 
 .title {
-	text-align: center;
-	margin: 0px;
-	line-height: 40px;
-	padding-left: 40px;
-	padding-right: 40px;
-	background-color: #00fffb;
-	border-radius: 5px;
+  text-align: center;
+  margin: 0px;
+  line-height: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #00fffb;
+  border-radius: 5px;
 }
 
-
 .table_machine-strip {
-	margin: 20px;
-	table-layout: fixed;
-	width: 0px;
+  margin: 20px;
+  table-layout: fixed;
+  width: 0px;
 }
 
 .container__machine-strip {
-	width: 100%;
-	height: 180px;
-	overflow-x: scroll;
-	overflow-y: hidden;
+  width: 100%;
+  height: 180px;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .table_machine-strip td {
-	width: 60px;
-	height: 40px;
-	text-align: center;
+  width: 60px;
+  height: 40px;
+  text-align: center;
 }
-
-
 
 .table_machine-strip .td-invs {
-	border: 0.5px solid transparent;
+  border: 0.5px solid transparent;
 }
 
-
-
 .container__control-panel {
-	margin: 60px;
+  margin: 60px;
 }
 
 .control-panel {
-	margin-left: auto;
-	margin-right: auto;
-	border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
 }
 
 .control-panel td {
-	padding: 20px;
+  padding: 20px;
 }
 
-
 .alphabet-symbols-choise {
-	font-size: 20px;
-	margin: 10px;
-	border-collapse: collapse;
+  font-size: 20px;
+  margin: 10px;
+  border-collapse: collapse;
 }
 
 .alphabet-symbols-choise th {
-	padding: 10px;
+  padding: 10px;
 }
 
 .alphabet-symbols-choise td {
-	padding: 10px;
+  padding: 10px;
 }
 
 .n_title {
-	display: inline;
-	padding: 0;
-	background-color: #00fffb;
-	width: auto;
-	border-radius: 5px;
+  display: inline;
+  padding: 0;
+  background-color: #00fffb;
+  width: auto;
+  border-radius: 5px;
 }
 
 .n_title h5 {
-	display: inline;
-	margin: 40px;
-	width: auto;
+  display: inline;
+  margin: 40px;
+  width: auto;
 }
 
 .control-panel td {
-	vertical-align: top;
+  vertical-align: top;
 }
 
-.ExternalAlphabet ul{
-	font-size: 25px;
-	margin: 30px;
+.ExternalAlphabet ul {
+  font-size: 25px;
+  margin: 30px;
 }
 
 .select_nullSumbol {
-	padding-left: 30px;
-	display: inline;
-	
-
+  padding-left: 30px;
+  display: inline;
 }
 
 .machineProgram {
-	border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 .symbolChangePanel {
-	text-align: center;
-	margin: 50px;
+  text-align: center;
+  margin: 50px;
 }
 
 .symbolChangePanel button {
-	display: inline;
-	width: auto;
+  display: inline;
+  width: auto;
 }
 
-
 .statesManager button {
-	display: inline;
-	width: auto;
+  display: inline;
+  width: auto;
 }
 
 .machineProgram {
-	font-weight: bold;
-	padding: 20px;
-
+  font-weight: bold;
+  padding: 20px;
 }
 
-.machineProgram td, th {
-	font-size: 20px;
-	padding: 17px;
+.machineProgram td,
+th {
+  font-size: 20px;
+  padding: 17px;
 }
-
-
 
 #commandFrom {
-	color: black;
+  color: black;
 }
 
 .machineRunPanel {
-	text-align: center;
+  text-align: center;
 }
 
 .machineRunPanel button {
-	display: inline;
-	width: auto;
+  display: inline;
+  width: auto;
 }

@@ -1,214 +1,228 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Емулятор машини Тюрінга</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Емулятор машини Тюрінга</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-	
-	<div class="wrapper">
-		<div class="statusBar"> <div class="title"><h5>Стрічка машини Тюрінга</h5></div> </div>
+    <div class="wrapper">
+        <div class="statusBar">
+            <div class="title">
+                <h5>Стрічка машини Тюрінга</h5>
+            </div>
+        </div>
 
-		<div class="container__machine-strip">
-			<table class="table_machine-strip">
-				<tr class="machine-strip"></tr>
-				<tr class="machine-head"></tr>
-				<tr class="machine-state"></tr>
+        <div class="container__machine-strip">
+            <table class="table_machine-strip">
+                <tr class="machine-strip"></tr>
+                <tr class="machine-head"></tr>
+                <tr class="machine-state"></tr>
 
-			</table>
-		</div>
+            </table>
+        </div>
 
-		<div class="symbolChangePanel invisible">
-			<span>Символ:</span>
-			<select id="stripSymbolSelect">
-				<option> 0 </option>
-				<option> 1 </option>
-			</select>
+        <div class="symbolChangePanel invisible">
+            <span>Символ:</span>
+            <select id="stripSymbolSelect">
+    <option> 0 </option>
+    <option> 1 </option>
+  </select>
 
-			<span style="width: 50px;">&nbsp;</span>
-			<button id="exitChoiseButton"> Вихід </button>
-			<span style="width: 50px;">&nbsp;</span>
-			<button id="setHeadButton">Встановити голівку</button>
-			<span style="width: 50px;">&nbsp;</span>
-			<button id="cleanStripButton">Очистити стрічку</button>
-		</div>
+            <span style="width: 50px;">&nbsp;</span>
+            <button id="exitChoiseButton"> Вихід </button>
+            <span style="width: 50px;">&nbsp;</span>
+            <button id="setHeadButton">Встановити голівку</button>
+            <span style="width: 50px;">&nbsp;</span>
+            <button id="cleanStripButton">Очистити стрічку</button>
+        </div>
 
-		<div class="machineRunPanel ">
-			<button id="doCommand">Виконати команду</button>
-			<span style="width: 50px;">&nbsp;</span>
-			<button id="doAll">Виконати все</button>
-			<span>з інтервалом</span>
-			<select id="selectSpeed">
-				<option>0</option>
-				<option>0.1</option>
-				<option>0.5</option>
-				<option>1</option>
-				<option>2</option>
-				<option>4</option>
-				<option>6</option>
-			</select>
-			<span>с</span>
-		</div>
+        <div class="machineRunPanel ">
+            <button id="doCommand">Виконати команду</button>
+            <span style="width: 50px;">&nbsp;</span>
+            <button id="doAll">Виконати все</button>
+            <span>з інтервалом</span>
+            <select id="selectSpeed">
+    <option>0</option>
+    <option>0.1</option>
+    <option>0.5</option>
+    <option>1</option>
+    <option>2</option>
+    <option>4</option>
+    <option>6</option>
+  </select>
+            <span>с</span>
+        </div>
 
-		<div class="container__control-panel">
-			<table class="control-panel">
-				<tbody>
-					<tr>
-						<td>
-							<div class="title"> <h5>Зовнішній <br> алфавіт</h5> </div>
+        <div class="container__control-panel">
+            <table class="control-panel">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="title">
+                                <h5>Зовнішній <br> алфавіт</h5>
+                            </div>
 
-							<table class="alphabet-symbols-choise">
-								<tr>
-									<th>Цифри</th>
-									<th colspan="3">Букви</th>
-								</tr>
-								<tr>
-									<td><input checked type="checkbox" name = "0">0</td>
-									<td><input type="checkbox" name = "a">a</td>
-									<td><input type="checkbox" name = "k">k</td>
-									<td><input type="checkbox" name = "u">u</td>
-								</tr>
-								<tr>
-									<td><input checked type="checkbox" name = "1">1</td>
-									<td><input type="checkbox" name = "b">b</td>
-									<td><input type="checkbox" name = "l">l</td>
-									<td><input type="checkbox" name = "v">v</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" name = "2">2</td>
-									<td><input type="checkbox" name = "c">c</td>
-									<td><input type="checkbox" name = "m">m</td>
-									<td><input type="checkbox" name = "w">w</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" name = "3">3</td>
-									<td><input type="checkbox" name = "d">d</td>
-									<td><input type="checkbox" name = "n">n</td>
-									<td><input type="checkbox" name = "x">x</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" name = "4">4</td>
-									<td><input type="checkbox" name = "e">e</td>
-									<td><input type="checkbox" name = "o">o</td>
-									<td><input type="checkbox" name = "p">p</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" name = "5">5</td>
-									<td><input type="checkbox" name = "f">f</td>
-									<td><input type="checkbox" name = "p">p</td>
-									<td><input type="checkbox" name = "z">z</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" name = "6">6</td>
-									<td><input type="checkbox" name = "g">g</td>
-									<td><input type="checkbox" name = "q">q</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" name = "7">7</td>
-									<td><input type="checkbox" name = "h">h</td>
-									<td><input type="checkbox" name = "r">r</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" name = "8">8</td>
-									<td><input type="checkbox" name = "i">i</td>
-									<td><input type="checkbox" name = "s">s</td>
-									<td></td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" name = "9">9</td>
-									<td><input type="checkbox" name = "j">j</td>
-									<td><input type="checkbox" name = "t">t</td>
-									<td></td>
-								</tr>
-							</table>
-							<div class="n_title"> <h5>Порожній символ:</h5> </div>
-							
-								<select id="nullSymbolChoice" style="display: inline; margin: 10px;">
-									<option>0</option>
-									<option>1</option>
-								</select>
-						</td>
-						
-						<td class="ExternalAlphabet">
-							<div class="title"> <h5>Внутрішній <br> алфавіт</h5> </div>
+                            <table class="alphabet-symbols-choise">
+                                <tr>
+                                    <th>Цифри</th>
+                                    <th colspan="3">Букви</th>
+                                </tr>
+                                <tr>
+                                    <td><input checked type="checkbox" name="0">0</td>
+                                    <td><input type="checkbox" name="a">a</td>
+                                    <td><input type="checkbox" name="k">k</td>
+                                    <td><input type="checkbox" name="u">u</td>
+                                </tr>
+                                <tr>
+                                    <td><input checked type="checkbox" name="1">1</td>
+                                    <td><input type="checkbox" name="b">b</td>
+                                    <td><input type="checkbox" name="l">l</td>
+                                    <td><input type="checkbox" name="v">v</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="2">2</td>
+                                    <td><input type="checkbox" name="c">c</td>
+                                    <td><input type="checkbox" name="m">m</td>
+                                    <td><input type="checkbox" name="w">w</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="3">3</td>
+                                    <td><input type="checkbox" name="d">d</td>
+                                    <td><input type="checkbox" name="n">n</td>
+                                    <td><input type="checkbox" name="x">x</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="4">4</td>
+                                    <td><input type="checkbox" name="e">e</td>
+                                    <td><input type="checkbox" name="o">o</td>
+                                    <td><input type="checkbox" name="p">p</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="5">5</td>
+                                    <td><input type="checkbox" name="f">f</td>
+                                    <td><input type="checkbox" name="p">p</td>
+                                    <td><input type="checkbox" name="z">z</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="6">6</td>
+                                    <td><input type="checkbox" name="g">g</td>
+                                    <td><input type="checkbox" name="q">q</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="7">7</td>
+                                    <td><input type="checkbox" name="h">h</td>
+                                    <td><input type="checkbox" name="r">r</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="8">8</td>
+                                    <td><input type="checkbox" name="i">i</td>
+                                    <td><input type="checkbox" name="s">s</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="9">9</td>
+                                    <td><input type="checkbox" name="j">j</td>
+                                    <td><input type="checkbox" name="t">t</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <div class="n_title">
+                                <h5>Порожній символ:</h5>
+                            </div>
 
-							<ul class="statesList">
-								<!-- <li>\[q_0\]</li>
-								<li>\[q_1\]</li> -->
-								<li>q0</li>
-								<li>q1</li>
-							</ul>
+                            <select id="nullSymbolChoice" style="display: inline; margin: 10px;">
+              <option>0</option>
+              <option>1</option>
+            </select>
+                        </td>
 
-							<button class="addStateButton">Додати стан</button>
-							<button class="deleteStateButton"> Видалити стан </button>
-						</td>
-						
-						<td>
-							<div class="title"> <h5>Програма</h5> </div>
+                        <td class="ExternalAlphabet">
+                            <div class="title">
+                                <h5>Внутрішній <br> алфавіт</h5>
+                            </div>
 
-							<table class="machineProgram">
-								<tbody>
-									<tr id="hri">
-										<td></td>
-										<th id="h-0">0</th>
-										<th id="h-1">1</th>
-									</tr>
-									
-									<tr id="1ri">
-										<th>q1</th>
-										<td id="1-0"></td>
-										<td id="1-1"></td>
-									</tr>
+                            <ul class="statesList">
+                                <!-- <li>\[q_0\]</li>
+            <li>\[q_1\]</li> -->
+                                <li>q0</li>
+                                <li>q1</li>
+                            </ul>
 
-									<tr id="0ri">
-										<th>q0</th>
-										<td id="0-0"></td>
-										<td id="0-1"></td>
-									</tr>
-								</tbody>
-							</table>
-							<button class="inactive"> Експорт </button>
-							<button class="inactive"> Імпорт </button>
+                            <button class="addStateButton">Додати стан</button>
+                            <button class="deleteStateButton"> Видалити стан </button>
+                        </td>
 
-						</td>
-					</tr>
+                        <td>
+                            <div class="title">
+                                <h5>Програма</h5>
+                            </div>
 
-					<tr class="statesManager invisible">
-						<td colspan="3">
-							<span>Команда</span>
-							<span id="commandFrom"></span>
-							q<select id="selectState"></select>
-							<select id="selectSymbol"></select>
-							<select id="selectDirection">
-								<option>L</option>
-								<option>R</option>
-								<option>S</option>
-							</select>
-							<button id="enterCommandButton">Ввід</button>
-							<button id="cancelCommandButton">Відмна</button>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+                            <table class="machineProgram">
+                                <tbody>
+                                    <tr id="hri">
+                                        <td></td>
+                                        <th id="h-0">0</th>
+                                        <th id="h-1">1</th>
+                                    </tr>
+
+                                    <tr id="1ri">
+                                        <th>q1</th>
+                                        <td id="1-0"></td>
+                                        <td id="1-1"></td>
+                                    </tr>
+
+                                    <tr id="0ri">
+                                        <th>q0</th>
+                                        <td id="0-0"></td>
+                                        <td id="0-1"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="inactive"> Експорт </button>
+                            <button class="inactive"> Імпорт </button>
+
+                        </td>
+                    </tr>
+
+                    <tr class="statesManager invisible">
+                        <td colspan="3">
+                            <span>Команда</span>
+                            <span id="commandFrom"></span> q
+                            <select id="selectState"></select>
+                            <select id="selectSymbol"></select>
+                            <select id="selectDirection">
+            <option>L</option>
+            <option>R</option>
+            <option>S</option>
+          </select>
+                            <button id="enterCommandButton">Ввід</button>
+                            <button id="cancelCommandButton">Відмна</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
 
 
-		<div style="width: 10px; height: 300px;"></div>
-		
-		
-	<!-- <script id="LaTeXscript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <div style="width: 10px; height: 300px;"></div>
+
+
+        <!-- <script id="LaTeXscript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 	<script type="text/x-mathjax-config"> 
 		MathJax.Hub.Config({ 
 			"HTML-CSS": { scale: 200, linebreaks: { automatic: true } }, 
 			SVG: { linebreaks: { automatic:true } }, 
 			displayAlign: "left" }); 
 		</script> -->
-		
-		<script src="script.js"></script>
-	
+
+        <script src="script.js"></script>
+
 </body>
+
 </html>
