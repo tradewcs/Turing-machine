@@ -83,11 +83,10 @@ if you add one.
 
 ## 📄 License
 
-This project is released under the **MIT License** – see [LICENSE](LICENSE) for
+This project is released under the **MIT License** – see [LICENSE](LICENSE.txt) for
 details.
 
 ---
 
 > 🎓 Designed as an educational tool, the Turing Machine Simulator aims to help
 > students and hobbyists visualise the mechanics of computation.
-
