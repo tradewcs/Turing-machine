@@ -8,6 +8,8 @@ concepts.
 
 ## 🔍 Overview
 
+![Turing Machine](img/picture1.png)
+
 This project provides a minimal Turing machine simulator written in
 **HTML, CSS, and JavaScript**. It allows users to define states, transitions,
 and tape contents, then step through executions to observe how the machine
